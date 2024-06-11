@@ -1,0 +1,30 @@
+[home]
+Welcome to our wedding website! We are thrilled to celebrate our special day with you.
+
+[about]
+We are excited to share our journey with you. Our love story began...
+
+[story]
+Our story began in...
+
+[event-lasvegas]
+Date: MM/DD/YYYY
+Description of the Las Vegas event.
+
+[event-valatie]
+Date: MM/DD/YYYY
+Description of the Valatie, NY event.
+
+[event-pune]
+Date: MM/DD/YYYY
+Description of the Pune, India event.
+
+[event-nyc]
+Date: MM/DD/YYYY
+Description of the New York City, NY event.
+
+[footer]
+Follow us on social media:
+Facebook: https://facebook.com/ourpage
+Instagram: https://instagram.com/ourpage
+Twitter: https://twitter.com/ourpage
