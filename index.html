@@ -236,62 +236,84 @@
         <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
         <i class="far fa-heart text-white"></i>
     </div>
-    <div class="owl-carousel gallery-carousel" id="gallery-container" style="height: 500px; overflow: hidden;">
-        <!-- Images will be dynamically added here -->
+    <div class="owl-carousel gallery-carousel">
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+            <a href="img/gallery-1.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+            <a href="img/gallery-2.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+            <a href="img/gallery-3.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+            <a href="img/gallery-4.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+            <a href="img/gallery-5.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+            <a href="img/gallery-6.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <!-- Additional images -->
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-7.jpg" alt="">
+            <a href="img/gallery-7.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-8.jpg" alt="">
+            <a href="img/gallery-8.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-9.jpg" alt="">
+            <a href="img/gallery-9.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-10.jpg" alt="">
+            <a href="img/gallery-10.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-11.jpg" alt="">
+            <a href="img/gallery-11.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <img class="img-fluid w-100" src="img/gallery-12.jpg" alt="">
+            <a href="img/gallery-12.jpg" data-lightbox="gallery">
+                <i class="fa fa-2x fa-plus text-white"></i>
+            </a>
+        </div>
     </div>
 </div>
 <!-- Gallery End -->
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var galleryContainer = document.getElementById("gallery-container");
-
-        // Define the pattern for the filenames
-        var pattern = "gallery-*.jpg";
-
-        // Fetch images matching the pattern
-        fetchImages(pattern);
-
-        function fetchImages(pattern) {
-            // Fetch images directly from the img directory
-            var directory = "img/";
-            var images = [];
-            for (var i = 1; i <= 10; i++) { // Adjust this loop to match the number of images you have
-                images.push(directory + "gallery-" + i + ".jpg");
-            }
-
-            images.forEach(function (image) {
-                var galleryItem = document.createElement("div");
-                galleryItem.className = "gallery-item";
-
-                var img = document.createElement("img");
-                img.className = "img-fluid";
-                img.src = image;
-                img.alt = "";
-
-                // Calculate width to maintain aspect ratio
-                img.onload = function () {
-                    var aspectRatio = img.naturalWidth / img.naturalHeight;
-                    var containerHeight = parseInt(getComputedStyle(galleryContainer).height);
-                    var imgWidth = containerHeight * aspectRatio;
-                    img.style.width = imgWidth + "px";
-                };
-
-                var link = document.createElement("a");
-                link.href = image;
-                link.setAttribute("data-lightbox", "gallery");
-
-                var icon = document.createElement("i");
-                icon.className = "fa fa-2x fa-plus text-white";
-
-                link.appendChild(icon);
-                galleryItem.appendChild(img);
-                galleryItem.appendChild(link);
-                galleryContainer.appendChild(galleryItem);
-            });
-        }
-    });
-</script>
 
 
     <!-- Footer Start -->
