@@ -236,7 +236,7 @@
         <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
         <i class="far fa-heart text-white"></i>
     </div>
-    <div class="owl-carousel gallery-carousel" id="gallery-container">
+    <div class="owl-carousel gallery-carousel" id="gallery-container" style="height: 500px; overflow: hidden;">
         <!-- Images will be dynamically added here -->
     </div>
 </div>
@@ -265,9 +265,11 @@
                 galleryItem.className = "gallery-item";
 
                 var img = document.createElement("img");
-                img.className = "img-fluid w-100";
+                img.className = "img-fluid";
                 img.src = image;
                 img.alt = "";
+                img.style.height = "100%"; // Ensure the image fills the container height
+                img.style.width = "auto"; // Maintain aspect ratio
 
                 var link = document.createElement("a");
                 link.href = image;
