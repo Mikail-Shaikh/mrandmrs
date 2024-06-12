@@ -268,8 +268,14 @@
                 img.className = "img-fluid";
                 img.src = image;
                 img.alt = "";
-                img.style.height = "100%"; // Ensure the image fills the container height
-                img.style.width = "auto"; // Maintain aspect ratio
+
+                // Calculate width to maintain aspect ratio
+                img.onload = function () {
+                    var aspectRatio = img.naturalWidth / img.naturalHeight;
+                    var containerHeight = parseInt(getComputedStyle(galleryContainer).height);
+                    var imgWidth = containerHeight * aspectRatio;
+                    img.style.width = imgWidth + "px";
+                };
 
                 var link = document.createElement("a");
                 link.href = image;
@@ -286,7 +292,6 @@
         }
     });
 </script>
-
 
 
     <!-- Footer Start -->
