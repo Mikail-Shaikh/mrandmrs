@@ -236,22 +236,60 @@
         <h1 class="font-secondary display-4 text-white">Our Photo Gallery</h1>
         <i class="far fa-heart text-white"></i>
     </div>
-    <div class="owl-carousel gallery-carousel">
-        <?php
-        $directory = "img/";
-        $files = glob($directory . "gallery-*.jpg");
-        foreach ($files as $file) {
-            echo '<div class="gallery-item">';
-            echo '<img class="img-fluid w-100" src="' . $file . '" alt="">';
-            echo '<a href="' . $file . '" data-lightbox="gallery">';
-            echo '<i class="fa fa-2x fa-plus text-white"></i>';
-            echo '</a>';
-            echo '</div>';
-        }
-        ?>
+    <div class="owl-carousel gallery-carousel" id="gallery-container">
+        <!-- Images will be dynamically added here -->
     </div>
 </div>
 <!-- Gallery End -->
+
+<script>
+    // JavaScript to dynamically load images
+    document.addEventListener("DOMContentLoaded", function () {
+        var galleryContainer = document.getElementById("gallery-container");
+
+        // Define the directory where images are stored
+        var directory = "img/";
+        
+        // Define the pattern for the filenames
+        var pattern = "gallery-*.jpg";
+
+        // Fetch images matching the pattern
+        fetchImages(directory, pattern);
+
+        function fetchImages(directory, pattern) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "fetch_images.php?dir=" + directory + "&pattern=" + pattern, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var images = JSON.parse(xhr.responseText);
+                    images.forEach(function (image) {
+                        var galleryItem = document.createElement("div");
+                        galleryItem.className = "gallery-item";
+                        
+                        var img = document.createElement("img");
+                        img.className = "img-fluid w-100";
+                        img.src = image;
+                        img.alt = "";
+                        
+                        var link = document.createElement("a");
+                        link.href = image;
+                        link.setAttribute("data-lightbox", "gallery");
+                        
+                        var icon = document.createElement("i");
+                        icon.className = "fa fa-2x fa-plus text-white";
+                        
+                        link.appendChild(icon);
+                        galleryItem.appendChild(img);
+                        galleryItem.appendChild(link);
+                        galleryContainer.appendChild(galleryItem);
+                    });
+                }
+            };
+            xhr.send();
+        }
+    });
+</script>
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
