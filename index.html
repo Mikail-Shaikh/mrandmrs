@@ -79,10 +79,6 @@
                         <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                             <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">The new Mr and Mrs Shaikh</h3>
                         </div>
-                        <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                            <span></span>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -100,91 +96,6 @@
     </div>
 </div>
 <!-- Carousel End -->
-
-<!-- Video Modal Start -->
-<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <!-- 16:9 aspect ratio -->
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Video Modal End -->
-
-<script>
-    $(document).ready(function() {
-        var $videoSrc;
-        $('.btn-play').click(function() {
-            $videoSrc = $(this).data("src");
-            $("#videoModal").on('shown.bs.modal', function () {
-                $("#video").attr('src', $videoSrc);
-            });
-            $("#videoModal").on('hide.bs.modal', function () {
-                $("#video").attr('src', '');
-            });
-        });
-    });
-</script>
-
-
-    <!-- Event Start -->
-<div class="container-fluid py-5" id="event">
-    <div class="container py-5">
-        <div class="section-title position-relative text-center">
-            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
-            <h1 class="font-secondary display-4">Our Events</h1>
-            <i class="far fa-heart text-dark"></i>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-                <h5 class="font-weight-normal text-muted mb-3 pb-3">Who needs money, when we can get married four times! That's right! You can buy us stuff four times!!</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 border-right border-primary">
-                <div class="text-center text-md-right mb-4 mb-md-0">
-                    <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
-                    <h4 class="mb-3">The paperwork</h4>
-                    <p class="mb-2">The Little White Wedding Chapel, Las Vegas</p>
-                    <p class="mb-0">31 December 2023</p>
-                </div>
-            </div>
-            <div class="col-md-3 border-right border-primary">
-                <div class="text-center text-md-right mb-4 mb-md-0">
-                    <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
-                    <h4 class="mb-3">US Family Party</h4>
-                    <p class="mb-2">Valatie, New York, USA</p>
-                    <p class="mb-0">7 September 2024</p>
-                </div>
-            </div>
-            <div class="col-md-3 border-right border-primary">
-                <div class="text-center text-md-right mb-4 mb-md-0">
-                    <img class="img-fluid mb-4" src="img/event-3.jpg" alt="">
-                    <h4 class="mb-3">India Family Party</h4>
-                    <p class="mb-2">Boat Club, Pune, India</p>
-                    <p class="mb-0">29 December 2024</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="text-center text-md-right mb-4 mb-md-0">
-                    <img class="img-fluid mb-4" src="img/event-4.jpg" alt="">
-                    <h4 class="mb-3">Friends</h4>
-                    <p class="mb-2">TBD, New York, USA</p>
-                    <p class="mb-0">TBD</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Event End -->
 
     <!-- Story Start -->
     <div class="container-fluid py-5" id="story">
@@ -248,7 +159,58 @@
     </div>
     <!-- Story End -->
 
-       <!-- Registry Start -->
+        <!-- Event Start -->
+<div class="container-fluid py-5" id="event">
+    <div class="container py-5">
+        <div class="section-title position-relative text-center">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
+            <h1 class="font-secondary display-4">Our Events</h1>
+            <i class="far fa-heart text-dark"></i>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h5 class="font-weight-normal text-muted mb-3 pb-3">Who needs money, when we can get married four times! That's right! You can buy us stuff four times!!</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 border-right border-primary">
+                <div class="text-center mb-4 mb-md-0">
+                    <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
+                    <h4 class="mb-3">The paperwork</h4>
+                    <p class="mb-2">The Little White Wedding Chapel, Las Vegas</p>
+                    <p class="mb-0">31 December 2023</p>
+                </div>
+            </div>
+            <div class="col-md-3 border-right border-primary">
+                <div class="text-center mb-4 mb-md-0">
+                    <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
+                    <h4 class="mb-3">US Family Party</h4>
+                    <p class="mb-2">Valatie, New York, USA</p>
+                    <p class="mb-0">7 September 2024</p>
+                </div>
+            </div>
+            <div class="col-md-3 border-right border-primary">
+                <div class="text-center mb-4 mb-md-0">
+                    <img class="img-fluid mb-4" src="img/event-3.jpg" alt="">
+                    <h4 class="mb-3">India Family Party</h4>
+                    <p class="mb-2">Boat Club, Pune, India</p>
+                    <p class="mb-0">29 December 2024</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center mb-4 mb-md-0">
+                    <img class="img-fluid mb-4" src="img/event-4.jpg" alt="">
+                    <h4 class="mb-3">Friends</h4>
+                    <p class="mb-2">TBD, New York, USA</p>
+                    <p class="mb-0">TBD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Event End -->
+
+<!-- Registry Start -->
     <div class="container-fluid py-5" id="registry">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
@@ -269,7 +231,6 @@
         </div>
     </div>
     <!-- Registry End -->
-
 
     <!-- Gallery Start -->
     <div class="container-fluid bg-gallery" id="gallery" style="padding: 120px 0; margin: 90px 0;">
