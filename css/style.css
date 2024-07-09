@@ -531,7 +531,8 @@ mark,
 }
 
 .img-small {
-  max-width: 80%;
+  max-width: 100%;
+  width: 300px
   height: auto;
 }
 
