@@ -158,7 +158,13 @@
                     <p class="mb-2">Loulou, 176 8th Ave NY, USA <br>TBD</p>
                     
                 <div>
-                    <button class="btn btn-secondary mt-2" disabled>Invitations forthcoming</button>
+                    <a href="https://your-rsvp-link.com" class="btn btn-primary btn-lg mt-2"
+   onclick="event.preventDefault(); gtag('event', 'click', {
+       'event_category': 'RSVP', 
+       'event_label': 'RSVP NY Event'
+   }); setTimeout(function(){ window.location.href='https://your-rsvp-link.com'; }, 200);">
+    RSVP Now
+</a>
                 </div>
                 </div>
             </div>
@@ -375,4 +381,5 @@
 </body>
 
 </html>
+
 
